@@ -21,6 +21,7 @@ public class RatingController {
 	@Autowired
 	public RestTemplate restTemplate;
 
+	
 	public MovieRatingDTO giveRating(int id, String name) {
 		MovieRatingDTO movieRatingDTO = new MovieRatingDTO();
 		movieRatingDTO.setMovieId(id);
