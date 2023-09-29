@@ -30,6 +30,7 @@ public class InfoController {
 		return list;
 	}
 	
+	
 	@RequestMapping(path = "/fromrating")
 	public ResponseEntity<?> fromrating(){
 		List<Integer> list= restTemplate.getForObject("http://movie-ratings/movie/rating", List.class);
