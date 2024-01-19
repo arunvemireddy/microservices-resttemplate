@@ -1,0 +1,32 @@
+server:
+  port: 8083
+  servlet:
+     context-path: /movie-ratings
+
+spring:
+  application:
+    name: movie-ratings
+
+
+management:
+   endpoints:
+      web:
+         base-path: /actuator
+         exposure:
+            include: "*"
+      health:
+         show-details: always
+ 
+info:
+   application:
+      name:   movie-ratings
+      server:
+         port: 8081
+         servlet:
+            context-path: /movie-ratings      
+         
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8762/eureka/
+      enabled: true

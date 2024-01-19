@@ -31,9 +31,9 @@ public class InfoController {
 	}
 	
 	
-	@RequestMapping(path = "/fromrating")
+	@RequestMapping(path = "/getInfo")
 	public ResponseEntity<?> fromrating(){
-		List<Integer> list= restTemplate.getForObject("http://movie-ratings/movie/rating", List.class);
+		List<Integer> list= restTemplate.getForObject("http://movie-ratings/movie-ratings/api/getRating", List.class);
 		return new ResponseEntity<>(list,HttpStatus.OK);
 	}
 }

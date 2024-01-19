@@ -1,0 +1,34 @@
+server:
+   port: 8082
+   servlet:
+      context-path: /movie-catalog
+spring:
+   application:
+      name: movie-catalog
+
+management:
+   endpoints:
+      web:
+         base-path: /actuator
+         exposure:
+            include: '*'
+      health:
+         show-details: always
+
+info:
+   application:
+      name: movie-catalog
+      server:
+         port: 8082
+         servlet:
+            context-path: /movie-catalog
+
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8762/eureka
+      enabled: true
+   instance:
+      metadataMap:
+         availability-zone: USA
+         ami-id: local
